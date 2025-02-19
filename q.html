@@ -1,0 +1,108 @@
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>献给小鬼</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Arial', sans-serif;
+background-color: #ffc0cb;
+overflow: hidden;
+text-align: center;
+}
+.container {
+background-color: rgba(255, 255, 255, 0.8);
+padding: 20px;
+border-radius: 10px;
+max-width: 80%;
+}
+.message {
+font-size: 2rem;
+font-weight: bold;
+color: #ff6347;
+cursor: pointer;
+margin-bottom: 20px;
+transition: transform 0.3s ease;
+}
+.message:hover {
+transform: scale(1.1);
+}
+.content {
+display: none;
+animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+.image-container img {
+max-width: 100%;
+max-height: 500px;
+margin-bottom: 20px;
+}
+.text {
+font-size: 1.2rem;
+color: #333;
+line-height: 1.6;
+}
+.signature {
+font-size: 1.5rem;
+color: #ff6347;
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="message" onclick="showContent()">献给小鬼--点我！</div>
+<div class="content" id="content1">
+<div class="text">
+<p>🎈祝你可爱依旧，快乐多多，</p>
+<p>🎂愿你三冬暖，愿你春不寒，</p>
+<p>🏠愿你独立坚强，愿你积极向上</p>
+<p>🍺愿昔日的痛苦，早已被今日所消化，</p>
+<p>🏆愿你多份勇气，多份豁达。</p>
+<p>🔍祝你开开心心，勇敢享受世界。</p>
+</div>
+</div>
+<div class="content" id="content2">
+<div class="image-container">
+<img src="https://i.ibb.co/0ycYz9Hq/20250219154335.jpg" alt="Birthday Image">
+</div>
+<div class="text">
+<p>希望你这个点子王</p>
+<p>所有的梦想都能实现</p>
+<p>所有的期待都能出现</p>
+<p>所有的付出都能兑现。</p>
+</div>
+<div class="text">
+<p>愿你能成为自己的光</p>
+<p>阳光下永远像个孩子，风雨里</p>
+<p>像个大人，无畏亦无惧。</p>
+<p>遇见了你，是天赐的礼物</p>
+<p>才开始了我这段最好的时光。</p>
+<p>承蒙时光不弃，感谢相遇</p>
+</div>
+<div class="signature">小鬼</div>
+</div>
+</div>
+<script>
+let currentContent = 1;
+function showContent() {
+  document.querySelector('.message').style.display = 'none';
+  document.getElementById('content1').style.display = 'block';
+  
+  setTimeout(() => {
+    document.getElementById('content1').style.display = 'none';
+    document.getElementById('content2').style.display = 'block';
+  }, 5000);
+}
+</script>
+</body>
+</html>
